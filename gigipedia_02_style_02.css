@@ -1,0 +1,96 @@
+:root{
+    --primary-color: #1C5B79;
+    --secondary-color: #9ECC64;
+    --gradient-main: linear-gradient(
+        135deg,
+        #1C5B79 0%,
+        #4C9B6A 50%,
+        #9ECC64 100%
+    );
+}
+
+/* Navbar */
+.navbar{
+    background: var(--gradient-main) !important;
+}
+
+/* Header Card */
+.card-header{
+    background: var(--gradient-main) !important;
+    color: white !important;
+    border: none;
+}
+
+/* Footer */
+footer{
+    background: var(--gradient-main);
+    color: white;
+}
+
+/* Tombol */
+.btn-primary{
+    background: var(--gradient-main);
+    border: none;
+}
+
+.btn-primary:hover{
+    opacity: 0.9;
+}
+
+/* Judul Section */
+.section-title{
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Background Section */
+.bg-light{
+    background: linear-gradient(
+        180deg,
+        #f8fafb 0%,
+        #eef8e6 100%
+    ) !important;
+}
+
+/* Alert Telepon */
+.alert-success{
+    background: rgba(158, 204, 100, 0.15);
+    border-left: 5px solid #9ECC64;
+    color: #1C5B79;
+}
+
+/* Card Hover */
+.card{
+    border: none;
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(28,91,121,.15);
+}
+
+/* Footer Icon */
+footer a{
+    color: white;
+    transition: .3s;
+}
+
+footer a:hover{
+    color: #9ECC64;
+}
+
+/* Nama Klinik */
+.klinik-title{
+    color: #1C5B79;
+    font-weight: 800;
+}
+
+/* Garis dekorasi */
+.title-line{
+    width: 100px;
+    height: 4px;
+    background: var(--gradient-main);
+    margin: 15px auto;
+    border-radius: 50px;
+}
