@@ -17,7 +17,7 @@
         }
 
         section {
-            padding: 80px 0;
+            padding: 60px 0;
         }
 
         .logo-klinik {
@@ -43,13 +43,13 @@
             margin: 0 15px;
         }
 
-        .video-section iframe,
+        .poster-section iframe,
         .map-section iframe {
             width: 100%;
             border: 0;
         }
 
-        .video-section iframe {
+        .poster-section iframe {
             height: 500px;
         }
 
@@ -76,6 +76,19 @@ body{
     position: relative;
     z-index: 0;
 }
+
+
+/*Tambahan_css_untuk_finising */
+#section_terakhir{
+	font-style: normal;
+	}
+#paragraf-khusus {
+    line-height: 1;
+}
+
+#dokter{
+	font-style: normal
+	}
 
 /* Background gambar full halaman */
 body::before{
@@ -347,9 +360,9 @@ footer a:hover{
 }
 /* Akhir Clausel SUDAH MELEDAK */
 
-/* Video Card Section 3 awal*/ 
+/* poster Card Section 3 awal*/ 
 
-#video .card img{
+#poster .card img{
     width: 80%;
     height: 140px;
     object-fit: cover;
@@ -367,9 +380,36 @@ footer a:hover{
     transform: scale(1.03);
 }
 
-/* Video Card Section 3 akhir*/
+/* poster Card Section 3 akhir*/
 
 
+/* style Video awal */
+/* Section Video */
+.video-card{
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.video-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(28,91,121,.15);
+}
+
+.video-card iframe{
+    border: none;
+}
+
+.video-card .card-body{
+    text-align: center;
+}
+/* style Video akhir */
+
+
+.kase_nae_sadiki{
+	margin-top: -500px;
+	}
 
     </style>
 </head>
@@ -403,7 +443,7 @@ footer a:hover{
                     <a class="nav-link" href="#dokter">Dokter</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#video">Video</a>
+                    <a class="nav-link" href="#poster">Poster</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#lokasi">Lokasi</a>
@@ -419,7 +459,7 @@ footer a:hover{
     </div>
 </nav>
 
-<!-- INFO BAR -->
+<!-- INFO BAR --><!--
 <div id="infoBar" class="info-bar">
 
     <div class="container d-flex justify-content-between align-items-center">
@@ -441,21 +481,24 @@ footer a:hover{
     </div>
 
 </div>
+-->
 
 <!-- SECTION 1 -->
 <section id="beranda">
     <div class="container">
 
         <div class="text-center mb-5">
-            <img src="File GigiPedia/GigiPedia.png" class="logo-klinik mb-3" alt="Logo">
+            <img src="File GigiPedia/GigiPedia.png" class="logo-klinik" alt="Logo">
             <!--
             <h1>Poli Gigi</h1>
             <p class="text-muted">Melayani Dengan Sepenuh Hati</p>
             -->
         </div>
 
+		
+		
         <div class="card shadow">
-            <div class="card-body">
+            <div class="card-body kase_nae_sadiki">
 
                 <div id="carouselKlinik" class="carousel slide" data-bs-ride="carousel">
 
@@ -474,10 +517,10 @@ footer a:hover{
 
 							<div class="carousel-image-wrapper">
 
-								<img src="File GigiPedia/pediatrics-4.webp" class="d-block w-100">
+								<img src="File GigiPedia/im25.jpeg" class="d-block w-100">
 
 								<div class="carousel-caption-custom">
-									Pediatrics
+									Acid
 								</div>
 
 							</div>
@@ -488,10 +531,10 @@ footer a:hover{
 
 							<div class="carousel-image-wrapper">
 
-								<img src="File GigiPedia/consultation-4.webp" class="d-block w-100">
+								<img src="File GigiPedia/im14.jpeg" class="d-block w-100">
 
 								<div class="carousel-caption-custom">
-									Area Pendaftaran 1
+									Dokter Gigi dan Perawat
 								</div>
 
 							</div>
@@ -502,10 +545,10 @@ footer a:hover{
 
 							<div class="carousel-image-wrapper">
 
-								<img src="File GigiPedia/cardiology-3.webp" class="d-block w-100">
+								<img src="File GigiPedia/im20.jpeg" class="d-block w-100">
 
 								<div class="carousel-caption-custom">
-									<i>Konsultasi</ii>
+									<i>Pemeriksaan</ii>
 								</div>
 
 							</div>
@@ -516,10 +559,10 @@ footer a:hover{
 
 							<div class="carousel-image-wrapper">
 
-								<img src="File GigiPedia/cardiology-2.webp" class="d-block w-100">
+								<img src="File GigiPedia/im18.jpeg" class="d-block w-100">
 
 								<div class="carousel-caption-custom">
-									<i>Cardiologi</ii>
+									<i>Agenda HUT</ii>
 								</div>
 
 							</div>
@@ -530,10 +573,10 @@ footer a:hover{
 
 							<div class="carousel-image-wrapper">
 
-								<img src="File GigiPedia/cardiology-1.webp" class="d-block w-100">
+								<img src="File GigiPedia/im16.jpeg" class="d-block w-100">
 
 								<div class="carousel-caption-custom">
-									<i>Cardiologi</ii>
+									<i>Hari Kemerdekaan</ii>
 								</div>
 
 							</div>
@@ -554,7 +597,8 @@ footer a:hover{
 
             </div>
         </div>
-
+	
+		
     </div>
 </section>
 
@@ -568,7 +612,7 @@ footer a:hover{
         <div class="text-center mb-4">
 
             <h2 class="section-title">
-                Dokter & Jadwal
+                <i>Dokter & Jadwal</i>
             </h2>
 
             <div class="title-line"></div>
@@ -602,32 +646,7 @@ footer a:hover{
         </div>
     </div>
 
-    <!-- Dokter 2 -->
-    <div class="col-lg-4 col-md-6">
-        <div class="card doctor-card text-center h-100">
-
-            <div class="pt-4">
-                <img src="File_foto/dokter_astrid.jpeg"
-                    alt="Dokter"
-                    class="doctor-photo">
-            </div>
-
-            <div class="card-body">
-                <h5 class="fw-bold">drg. Astrid</h5>
-                <p class="text-success mb-2">
-                    Dokter Gigi
-                </p>
-                <!--
-                <small class="text-muted">
-                    Fokus pada kesehatan dan tumbuh kembang gigi.
-                </small>
-                -->
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Dokter 3 -->
+	<!-- Dokter 3 -->
     <div class="col-lg-4 col-md-6">
         <div class="card doctor-card text-center h-100">
 
@@ -642,7 +661,7 @@ footer a:hover{
 					drg. Barliantari Rizki<br> Namora Harahap
                 </h5>
                 <p class="text-success mb-2">
-                    Dokter Gigi
+                    Dokter Gigi Umum
                 </p>
                 <!--
                 <small class="text-muted">
@@ -653,6 +672,33 @@ footer a:hover{
 
         </div>
     </div>
+
+
+    <!-- Dokter 2 -->
+    <div class="col-lg-4 col-md-6">
+        <div class="card doctor-card text-center h-100">
+
+            <div class="pt-4">
+                <img src="File_foto/dokter_astrid.jpeg"
+                    alt="Dokter"
+                    class="doctor-photo">
+            </div>
+
+            <div class="card-body">
+                <h5 class="fw-bold">drg. Astrid Dwi Satti</h5>
+                <p class="text-success mb-2">
+                    Dokter Gigi Umum
+                </p>
+                <!--
+                <small class="text-muted">
+                    Fokus pada kesehatan dan tumbuh kembang gigi.
+                </small>
+                -->
+            </div>
+
+        </div>
+    </div>
+
 
 </div>
 		
@@ -673,19 +719,19 @@ footer a:hover{
                     </thead>
                     <tbody>
                         <tr>
-                            <td>dr. Iwan</td>
+                            <td>drg. Iwan Wirasatyawan, Sp. Ort</td>
                             <td>Ortodontik</td>
-                            <td>08:00 - 12:00</td>
+                            <td>08:00 - 14:00</td>
                         </tr>
                         <tr>
-                            <td>dr. Astrid</td>
-                            <td>Gigi</td>
-                            <td>08:00 - 12:00</td>
+                            <td>drg. Astrid Dwi Satti</td>
+                            <td>Gigi Umum</td>
+                            <td>08:00 - 14:00</td>
                         </tr>
                         <tr>
-                            <td>dr. Namora</td>
-                            <td>Gigi</td>
-                            <td>08:00 - 12:00</td>
+                            <td>drg. Barliantari Rizki<br> Namora Harahap</td>
+                            <td>Gigi Umum</td>
+                            <td>08:00 - 14:00</td>
                         </tr>
                     </tbody>
                 </table>
@@ -890,9 +936,112 @@ footer a:hover{
 
 </section>
 
+<!-- SECTION VIDEO -->
+
+<section id="video" class="py-5 bg-light">
+
+    <div class="container">
+
+        <!-- Judul -->
+        <div class="text-center mb-4">
+            <h2 class="section-title">
+                Video Edukasi
+            </h2>
+
+            <div class="title-line"></div>
+
+            <p id="section_terakhir">
+                Tonton video edukasi kesehatan gigi dan mulut.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Video 1 -->
+            <div class="col-lg-6">
+                <div class="card video-card shadow-sm h-100">
+                    <div class="ratio ratio-16x9">
+       <iframe width="560" height="315" 
+       src="https://youtube.com/shorts/ikXb9qXOm0k?feature=share" 
+       allowfullscreen>
+       </iframe>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Flossing Gigi</h5>
+                        <p class="card-text">
+                            Mari kita dengarkan lagu edukasi gigi
+                        </p>
+                    </div>
+                </div>
+            </div>
+          
+            <!-- Video 2 -->
+            <div class="col-lg-6">
+                <div class="card video-card shadow-sm h-100">
+                    <div class="ratio ratio-16x9">
+       <iframe width="560" height="315" 
+       src="https://youtube.com/shorts/abjiYMFvxfI?feature=share" 
+       allowfullscreen>
+       </iframe>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Perawatan Cabut Gigi</h5>
+                        <p class="card-text">
+                            Setalah cabut gigi apa yang harus di hindari
+                        </p>
+                    </div>
+                </div>
+            </div>
+          
+            <!-- Video 3 -->
+            <div class="col-lg-6">
+                <div class="card video-card shadow-sm h-100">
+                    <div class="ratio ratio-16x9">
+       <iframe width="560" height="315" 
+       src="https://youtube.com/shorts/kfF-SKfzltA?si=CmbLEIfBqXVNJT0O" 
+       allowfullscreen>
+       </iframe>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Poli Layanan Gigi RSChB</h5>
+                        <p class="card-text">
+                            Seperti apa ya pelayanan di Poli Gigi
+                            RSUD Dr. H. Chasan Boesoirie???
+                        </p>
+                    </div>
+                </div>
+            </div>
+          
+            <!-- Video 4 -->
+            <div class="col-lg-6">
+                <div class="card video-card shadow-sm h-100">
+                    <div class="ratio ratio-16x9">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-w3JQqLZb3M?si=79q24lcPlappYiFz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Kiki dan Miumiu</h5>
+                        <p class="card-text">
+                            Perjalanan Panda Menjadi Dokter Gigi
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+</section>
 
 <!-- SECTION 3 -->
-<section id="video" class="video-section">
+<section id="poster" class="poster-section">
 
     <!--<div class="container-fluid px-0">
 
@@ -900,7 +1049,7 @@ footer a:hover{
     width="100%"
     height="500"
     src="https://www.youtube.com/embed/hRvNNxiLXMA?si=A3n-A_Juvk7N04h2&amp;controls=0"
-    title="YouTube video"
+    title="YouTube poster"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen>
@@ -917,7 +1066,7 @@ footer a:hover{
         <div class="text-center mb-4">
 
             <h2 class="section-title">
-                Edukasi
+                Poster Edukasi
             </h2>
 
             <div class="title-line"></div>
@@ -932,10 +1081,6 @@ footer a:hover{
 					 alt="Fasilitas Klinik"
 					 class="img-fluid edukasi-img"
 					 onclick="showImage(this.src)">
-                    <div class="card-body">
-                        <h5>Layanan Umum</h5>
-                        <p>Konsultasi kesehatan umum.</p>
-                    </div>
                 </div>
             </div>
 
@@ -945,10 +1090,6 @@ footer a:hover{
 					 alt="Fasilitas Klinik"
 					 class="img-fluid edukasi-img"
 					 onclick="showImage(this.src)">
-                    <div class="card-body">
-                        <h5>Layanan Anak</h5>
-                        <p>Pemeriksaan kesehatan anak.</p>
-                    </div>
                 </div>
             </div>
 
@@ -958,10 +1099,6 @@ footer a:hover{
 					 alt="Fasilitas Klinik"
 					 class="img-fluid edukasi-img"
 					 onclick="showImage(this.src)">
-                    <div class="card-body">
-                        <h5>Layanan Gigi</h5>
-                        <p>Perawatan gigi dan mulut.</p>
-                    </div>
                 </div>
             </div>
 
@@ -975,10 +1112,6 @@ footer a:hover{
 					 alt="Fasilitas Klinik"
 					 class="img-fluid edukasi-img"
 					 onclick="showImage(this.src)">
-                    <div class="card-body">
-                        <h5>Layanan Umum</h5>
-                        <p>Konsultasi kesehatan umum.</p>
-                    </div>
                 </div>
             </div>
 
@@ -988,10 +1121,6 @@ footer a:hover{
 					 alt="Fasilitas Klinik"
 					 class="img-fluid edukasi-img"
 					 onclick="showImage(this.src)">
-                    <div class="card-body">
-                        <h5>Layanan Anak</h5>
-                        <p>Pemeriksaan kesehatan anak.</p>
-                    </div>
                 </div>
             </div>
 
@@ -1001,10 +1130,6 @@ footer a:hover{
 					 alt="Fasilitas Klinik"
 					 class="img-fluid edukasi-img"
 					 onclick="showImage(this.src)">
-                    <div class="card-body">
-                        <h5>Layanan Gigi</h5>
-                        <p>Perawatan gigi dan mulut.</p>
-                    </div>
                 </div>
             </div>
 
@@ -1047,6 +1172,7 @@ footer a:hover{
 
 </section>
 
+<section id="section_terakhir">
 <div class="container">
 
     <div class="row">
@@ -1056,9 +1182,12 @@ footer a:hover{
             <div class="contact-box">
 
                 <!--<h4 class="mb-4">Hubungi Kami</h4>-->
-				<p><b>GigiPedia Pusat Informasi</b></p>
+				<p id="paragraf-khusus">
+					<b>GigiPedia</b> <br>
+					Pusat Informasi & Edukasi Poli Gigi RSUD Dr. H. Chasan Boesoirie
+				</p>
 				<p><i>KAMI ADALAH SOLUSI SEHATMU</i></p>
-				<p>Jangan lupa sikat gigi dua kali sehari pagi setalah sarapan dan malam sebelum tidur</p>
+				<p>Jangan lupa sikat gigi dua kali sehari, pagi setelah sarapan dan malam sebelum tidur.</p>
 				
 								<div class="contact-item">
 
@@ -1174,7 +1303,7 @@ footer a:hover{
                         <h5>Jam Pelayanan</h5>
 
                         <p>
-                            Senin - Jumat<br>
+                            Senin - Sabtu<br>
                             08.00 - 14.00 WIT
                         </p>
 
@@ -1191,7 +1320,7 @@ footer a:hover{
 
 </div>
 <br><br>
-
+</section>
 <!-- FOOTER -->
 <footer>
 	
